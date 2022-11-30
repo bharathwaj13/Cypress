@@ -1,0 +1,24 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "my first cypress test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open",
+    "cy:run": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bharathwaj13/Cypress.git"
+  },
+  "author": "Bharathwaj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bharathwaj13/Cypress/issues"
+  },
+  "homepage": "https://github.com/bharathwaj13/Cypress#readme",
+  "devDependencies": {
+    "cypress": "^11.2.0"
+  }
+}
