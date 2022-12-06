@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/bharathwaj13/Cypress#readme",
   "devDependencies": {
-    "cypress": "^11.2.0"
+    "cypress": "^11.2.0",
+    "cypress-iframe": "^1.0.1"
   }
 }
