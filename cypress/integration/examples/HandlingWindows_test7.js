@@ -5,7 +5,7 @@ describe('My seventh test suite', () => {
 
     it('My seventh test case', () => {
 
-        cy.visit("https://rahulshettyacademy.com/AutomationPractice/");
+        cy.visit(Cypress.env('url')+"AutomationPractice/");
 
         // Handling Windows
         // prop() is the jquery method used to get the attribute of an element

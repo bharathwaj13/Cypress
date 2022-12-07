@@ -5,7 +5,7 @@ describe('My sixth test suite', () => {
 
     it('My sixth test case', () => {
 
-        cy.visit("https://rahulshettyacademy.com/AutomationPractice/");
+        cy.visit(Cypress.env('url')+"AutomationPractice/");
 
         // Handling Mouse Hover
         // No direct support in Cypress. Should be handled alternatively using 'show' jquery function

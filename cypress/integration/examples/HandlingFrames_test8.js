@@ -8,7 +8,7 @@ describe('Frames Suite', () => {
 
     it('Frames Test', () => {
 
-        cy.visit("https://rahulshettyacademy.com/AutomationPractice/");
+        cy.visit(Cypress.env('url')+"AutomationPractice/");
 
         // Handling Frames
         // npm install -D cypress-iframe command need to be executed and the package imported here

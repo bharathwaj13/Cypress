@@ -4,7 +4,7 @@ describe('My fifth test suite', () => {
 
     it('My fifth test case', () => {
 
-        cy.visit("https://rahulshettyacademy.com/AutomationPractice/");
+        cy.visit(Cypress.env('url')+"AutomationPractice/");
 
         // Handling WebTable
 

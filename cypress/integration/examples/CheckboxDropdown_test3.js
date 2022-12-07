@@ -4,7 +4,7 @@ describe('My third test suite', () => {
 
     it('My third test case', () => {
 
-        cy.visit("https://rahulshettyacademy.com/AutomationPractice/");
+        cy.visit(Cypress.env('url')+"/AutomationPractice/");
 
         //checkbox
 
