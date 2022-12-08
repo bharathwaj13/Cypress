@@ -43,6 +43,10 @@ describe("Framework Hooks", () => {
             checkoutCount = ele.text().match(/\d+/g);
             cy.log(checkoutCount);
         })
+
+        // Trigger API is used to trigger unique mouse events
+        // Refer https://docs.cypress.io/api/commands/trigger#Mouse-Events
+
         productPage.getCheckoutButton().click();
         let productTotal = 0, checkoutTotal = 0;
         checkoutPage.getProductTotalElements().each(($el, index, list) => {

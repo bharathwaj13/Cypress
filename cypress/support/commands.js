@@ -12,7 +12,7 @@
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
 
-import ProductPage from '../../support/pages/ProductPage';
+import ProductPage from '../support/pages/ProductPage';
 
 const productPage = new ProductPage();
 

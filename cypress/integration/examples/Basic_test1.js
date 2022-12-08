@@ -20,6 +20,8 @@ describe('My first test suite', () => {
         // To add second element to cart - This method is better than second type below
         cy.get('@Products').find('.product').eq(1).contains('ADD TO CART').click()
 
+        //dblclick() used to Double click a button
+
         // Direct css for Second Add to Cart Button
         //div.products>div:nth-of-type(2)>.product-action>button
 
@@ -34,6 +36,7 @@ describe('My first test suite', () => {
 
         cy.get('@Products').find('.product').each(($el, index, $list) => {
             const vegName = $el.find('h4.product-name').text()
+            cy.log('vegname' +vegName);
             if (vegName.includes('Capsicum')) {
                 cy.wrap($el).find('button').click()
 
