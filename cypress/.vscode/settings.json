@@ -1,0 +1,6 @@
+{
+    "cucumberautocomplete.steps": [
+        "cypress/integration/examples/BDD/ecommerce/*.js"
+    ],
+    "cucumberautocomplete.strictGherkinCompletion": true
+}
