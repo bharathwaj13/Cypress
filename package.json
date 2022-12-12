@@ -6,14 +6,14 @@
   "scripts": {
     "test": "node_modules\\.bin\\cypress run",
     "tagged:test": "node_modules\\.bin\\cypress-tags run",
-    "headTest": "npm run test -- --headed",
-    "chromeTest": "npm run test -- --browser chrome",
-    "recordDashBoardTest": "npm run test --  --headed --browser chrome --record --key b09ea9f6-6fef-4f4f-bbeb-006886a86e9e",
+    "headTest": "npm run test -- --headed --browser chrome",
+    "recordDashBoardTest": "npm run headTest -- --record --key b09ea9f6-6fef-4f4f-bbeb-006886a86e9e",
     "cypress:open": "cypress open",
     "cy:run": "cypress run",
-    "cucumberTest": "npm run test -- --headed --browser chrome --spec \"cypress/integration/examples/BDD/*.feature",
-    "cucumberSmokeTest": "npm run tagged:test -e Tags='@Smoke' --headed --browser chrome --spec \"cypress/integration/examples/BDD/*.feature",
-    "cucumberRegressionTest": "npm run tagged:test -e Tags='@Regression' --headed --browser chrome --spec \"cypress/integration/examples/BDD/*.feature"
+    "cucumberTest": "npm run headTest -- --spec \"cypress/integration/examples/BDD/*.feature",
+    "cucumberSmokeTest": "npm run tagged:test -- -e Tags='@Smoke' --headed --browser chrome --spec \"cypress/integration/examples/BDD/*.feature",
+    "cucumberRegressionTest": "npm run tagged:test -- -e Tags='@Regression' --headed --browser chrome --spec \"cypress/integration/examples/BDD/*.feature",
+    "specificTest": "npm run headTest -- --spec \"cypress\\integration\\examples\\MouseOperations.js\""
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,
@@ -35,6 +35,7 @@
   },
   "homepage": "https://github.com/bharathwaj13/Cypress#readme",
   "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.2.3",
     "cypress": "^11.2.0",
     "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-iframe": "^1.0.1",

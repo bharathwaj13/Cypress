@@ -3,8 +3,8 @@ const cucumber = require('cypress-cucumber-preprocessor').default;
 
 module.exports = defineConfig({
   projectId: '1igfuy',
-  defaultCommandTimeout: 9000,
-  pageLoadTimeout: 8000,
+  defaultCommandTimeout: 15000,
+  pageLoadTimeout: 15000,
   env: {
     url: 'https://rahulshettyacademy.com/'
   },
@@ -13,8 +13,11 @@ module.exports = defineConfig({
       // implement node event listeners here
       on('file:preprocessor', cucumber())
     },
-    //specPattern: 'cypress/integration/examples/*.js',
-    specPattern: 'cypress/integration/examples/BDD/*.feature',
-    watchForFileChanges: false
+    specPattern: 'cypress/integration/examples/*.js',
+    //specPattern: 'cypress/integration/examples/BDD/*.feature',
+    watchForFileChanges: true
   },
+  
+    "retries": 1
+  
 });
